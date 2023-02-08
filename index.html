@@ -3,22 +3,119 @@
 <head>
     <title> home </title>
     <meta charset="utf-8">
+    <style>
+        body {
+            margin:0px;
+        }
+        a {
+           color:black;
+           text-decoration: none;
+        } 
+        h1 {
+        text-align: center;
+        font-size:40px;
+        border:1px solid gray;
+        margin:5px;
+        padding:10px;
+        }
+        img { display: block; margin: 0px auto; }
+        #grid ol{
+            margin:10;
+            padding:40px;
+            padding-left:33px;
+        }
+        #rgrid_l img{display:inline; margin:10px}
+        .name {
+            margin-right: 30px;
+        }
+        hr {
+            margin:0;
+        }
+        #grid {
+            display:grid;
+            grid-template-columns:230px 3fr;
+        }
+        #grid #home{
+            border-left : 1px solid black;
+            width:max-content;
+            padding-left:450px;
+            text-align: center; }
+        
+        #rgrid {
+            display:grid;
+            grid-template-rows: 2fr;
+        }
+
+        #rgrid_l #rgrid_l_content {margin-left:400px;}
+
+        @media(max-width:800px) {
+            #grid{
+                display :block;
+            }
+            #grid #home{
+                border-left: none;
+                padding-left: 120px;
+                text-align: center;
+            }
+
+        }
+        input, h3 {
+            margin : 10px 10px 10px 10px;
+        }
+
+        .id {margin-left: 400px; padding-left: 50px; padding-right:50px;}
+
+       </style>
 </head>
 
 <body>
-    <h1><a href="index.html">Reading Notes</a></h1>
-    <p> <h3>[기록의 중요성] <br>
-        기록하지 않으면 기억하지 못한다.</h3></p>
-    <ul>
-        <li>name: Jun Yeong Jung</li>
-        <li>contact: j2ysun@gjue.kr</li>
-    </ul> 
-    <br>   
-    <ol>
-        <h3> 읽은 책 목록 </h3>
-        <li><a href="1.html">스노볼 드라이브</a></li>
-        <li><a href="2.html">여름의 빌라</a></li>
-        <li><a href="3.html">마케팅 불변의 법칙</a></li>
-    </ol>
+    <h1 style="background-color: darkgray;"><a href="index.html">Reading Notes</a></h1></div>
+    <div class="name" style="text-align: right; margin-bottom: 10px;" >contact: j2ysun@gjue.kr</div>  
+    <hr idth="max" color="black" noshade />
+    <div id="rgrid">
+        <div id="rgrid_h">
+            <div id="grid" style="background-color:aliceblue;">
+                <div id="content">
+                    <ol>
+                        <h3> 읽은 책 목록</h3>
+                        <li><a href="1.html">스노볼 드라이브</a></li>
+                        <li><a href="2.html">여름의 빌라</a></li>
+                        <li><a href="3.html">마케팅 불변의 법칙</a></li>
+                    </ol>
+                    <p> <h3>앞으로 읽고 싶은 책</h3>
+                        <input type="text" value="책 제목:" onchange="alert('등록되었습니다')">
+                    </p>
+
+                </div>
+                <div id="home">
+                    <p><br><br><h4>
+                            "양서는 처음 읽을 때는 새 친구를 얻은 것 같고,<br> 
+                            전에 정독한 책을 다시 읽을 때는<br> 
+                            옛 친구를 만나는 것 같다."</h4>
+                        <img src="https://t1.daumcdn.net/cfile/tistory/120D63464ED498CA02" width="400">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="rgrid_l" style="background-color:antiquewhite;">
+            <hr width="max" color="black" noshade />
+            <h2 style="text-align: center;">추천도서 목록</h2>
+            <div id="rgrid_l_content"> 
+                <img src="http://image.yes24.com/goods/105661152/XL" width="200">
+                <img src="http://image.yes24.com/goods/89928004/XL" width="200">
+                <img src="http://image.yes24.com/goods/117247363/XL" width="200">
+            </div> 
+        </div>
+    </div>
+    <hr width="max" color="black" noshade />
+    <p style="text-align: center;"> made by jun yeong jung </p>
+    <input class="id" type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+    <input class="id" type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    ">
 </body>
 </html>

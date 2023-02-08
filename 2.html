@@ -3,26 +3,75 @@
 <head>
     <title> 독서기록장 </title>
     <meta charset="utf-8">
+    <style>
+     a {
+        color:black;
+        text-decoration: none;
+     } 
+     h1 {
+        text-align: center;
+        font-size:40px;
+        border:1px solid gray;
+        margin:5px;
+        padding:10px;
+        }
+        h2 {
+        border-width:2px;
+        border-color:black;
+        border-style: solid;
+        display:inline;
+     }
+     #active{
+        color:skyblue
+     }
+     .saw{
+        color:gray;
+     }
+     #grid {
+                display:grid;
+                grid-template-columns:200px 500px 3fr;
+            }
+     #grid #home{
+                border-left : 1px solid black;
+                width:3fr;
+                text-align: center;
+             }
+    </style>
 </head>
 
 <body>
     <h1><a href="index.html">독서기록장</a></h1>
+    <div id="grid">
+        <div>
     <ol>
-        <li><a href="1.html">스노볼 드라이브</a></li>
-        <li><a href="2.html">여름의 빌라</a></li>
-        <li><a href="3.html">마케팅 불변의 법칙</a></li>
+        <li><a href="1.html" class="saw">스노볼 드라이브</a></li>
+        <li><a href="2.html" class="saw" id="active">여름의 빌라</a></li>
+        <li><a href="3.html" class="saw">마케팅 불변의 법칙</a></li>
     </ol>
-    <ul>
-        <li>정준영</li>
-        <li>junyeong jung</li>
-    </ul>
-    <ol>
-        <h2> <a href="http://www.yes24.com/Product/Goods/91053468" target="_blank", title="여름의 빌라 구매처">여름의 빌라</a> </h1>
-    </ol>
-    <p sytle="margin-top:40px"> <img src="http://image.yes24.com/goods/91053468/XL" width="200"> <br>소설집 『폴링 인 폴』 『참담한 빛』, 중편소설 『친애하고 친애하는』 등을 통해 한국문학을 대표하는 작가로 자리매김한<strong>백수린.</strong> 
-    대체 불가능한 아름다운 문장과 섬세한 플롯으로 문단과 독자의 신뢰를 한몸에 받아온 백수린이 세번째 소설집 『여름의 빌라』를 선보인다. 
-    현대문학상(「아직 집에는 가지 않을래요」), 문지문학상(「여름의 빌라」), 젊은작가상(「고요한 사건」 「시간의 궤적」) 수상작을 한 권에 만나볼 수 있는 <strong>『여름의 빌라』</strong>는 오직 백수린만이 가능한 깊고 천천한 시선으로 
-    비로소-기어코 나의 작은 세계를 벗어나는 이들의 눈부신 궤적을 담은 작품집이다.
-    </p>
+</div>
+    <div id="home" style="background-color:aliceblue;">
+        <br><br>
+        <h2> <a href="http://www.yes24.com/Product/Goods/91053468" target="_blank", title="여름의 빌라 구매처">여름의 빌라</a> </h2>
+        <br><br><br><img src="http://image.yes24.com/goods/91053468/XL" width="200"> <br>
+    </div>
+    <div id="introduce" style="background-color:aliceblue;">  
+        <br><br>
+        <h2> 책 소개 </h2><br><br>    
+        소설집 『폴링 인 폴』 『참담한 빛』, 중편소설 『친애하고 친애하는』 등을 통해 한국문학을 대표하는 작가로 자리매김한<strong>백수린.</strong> 
+        <br>대체 불가능한 아름다운 문장과 섬세한 플롯으로 문단과 독자의 신뢰를 한몸에 받아온 백수린이 세번째 소설집 『여름의 빌라』를 선보인다. 
+        현대문학상(「아직 집에는 가지 않을래요」), 문지문학상(「여름의 빌라」), 젊은작가상(「고요한 사건」 「시간의 궤적」) 수상작을 한 권에 만나볼 수 있는 <strong>『여름의 빌라』</strong>는 오직 백수린만이 가능한 깊고 천천한 시선으로 
+        비로소-기어코 나의 작은 세계를 벗어나는 이들의 눈부신 궤적을 담은 작품집이다.
+    </div>
+</div>
+<hr width="max" color="black" noshade />
+<p style="text-align: center;"> made by jun yeong jung </p>
+<input class="id" type="button" value="night" onclick="
+document.querySelector('body').style.backgroundColor = 'black';
+document.querySelector('body').style.color = 'white';
+">
+<input class="id" type="button" value="day" onclick="
+document.querySelector('body').style.backgroundColor = 'white';
+document.querySelector('body').style.color = 'black';
+">
 </body>
 </html>

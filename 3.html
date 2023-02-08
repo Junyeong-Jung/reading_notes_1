@@ -3,25 +3,68 @@
 <head>
     <title> 독서기록장 </title>
     <meta charset="utf-8">
+    <style>
+        a {
+           color:black;
+           text-decoration: none;
+        }
+        h1 {
+        text-align: center;
+        font-size:40px;
+        border:1px solid gray;
+        margin:5px;
+        padding:10px;
+        }
+        h2 {
+        border-width:2px;
+        border-color:black;
+        border-style: solid;
+        display:inline;
+     }
+     #grid {
+                display:grid;
+                grid-template-columns:200px 500px 3fr;
+            }
+            #grid #home{
+                border-left : 1px solid black;
+                width:3fr;
+                text-align: center;
+            }
+       </style>
 </head>
 
 <body>
     <h1><a href="index.html">독서기록장</a></h1>
-    <ol>
-        <li><a href="1.html">스노볼 드라이브</a></li>
-        <li><a href="2.html">여름의 빌라</a></li>
-        <li><a href="3.html">마케팅 불변의 법칙</a></li>
-    </ol>
-    <ul>
-        <li>정준영</li>
-        <li>junyeong jung</li>
-    </ul>
-    <ol>
-        <h2> <a href="http://www.yes24.com/Product/Goods/3173899" target="_blank", title="여름의 빌라 구매처">마케팅 불면의 법칙</a> </h1>
-    </ol>
-    <p sytle="margin-top:40px">현존하는 최고의 마케팅 전략가인, 이 책의 저자 <strong>알 리스와 잭 트라우트</strong>는 마케팅 세상을 지배하고 있는 확고부동한 법칙을 규명한다. 
-        <br><img src="http://image.yes24.com/goods/3173899/XL" width="200"> <br>시장의 성공과 실패는 마케팅에 들인 노력과 비용, 우연한 행운 등의 요인이 아니라 오직 이 절대법칙에 의해서만 좌우된다. 
-        출간 15년 만에 최신 번역판으로 출간되는 이 세기의 베스트셀러인 이 책에는 지금도 그 유효성을 여실히 입증하고 있는 22가지 법칙들이 제시되어 있다.
-    </p>
+    <div id="grid">
+        <div>
+            <ol>
+                <li><a href="1.html">스노볼 드라이브</a></li>
+                <li><a href="2.html">여름의 빌라</a></li>
+                <li><a href="3.html" style="color:gray">마케팅 불변의 법칙</a></li>
+            </ol>
+        </div>
+        <div id="home" style="background-color:aliceblue;">
+            <br><br>
+            <h2> <a href="http://www.yes24.com/Product/Goods/3173899" target="_blank", title="여름의 빌라 구매처">마케팅 불변의 법칙</a> </h1>
+            <br><br><br><img src="http://image.yes24.com/goods/3173899/XL" width="200"> 
+        </div>
+        <div id="introduce" style="background-color:aliceblue;">
+            <br><br>
+            <h2> 책 소개 </h2><br><br>    
+            현존하는 최고의 마케팅 전략가인, 이 책의 저자 <strong>알 리스와 잭 트라우트</strong>는 마케팅 세상을 지배하고 있는 확고부동한 법칙을 규명한다.
+            <br>시장의 성공과 실패는 마케팅에 들인 노력과 비용, 우연한 행운 등의 요인이 아니라 오직 이 절대법칙에 의해서만 좌우된다. 
+            출간 15년 만에 최신 번역판으로 출간되는 이 세기의 베스트셀러인 이 책에는 지금도 그 유효성을 여실히 입증하고 있는 22가지 법칙들이 제시되어 있다.
+        </div> 
+    </div>
+    <hr width="max" color="black" noshade />
+    <p style="text-align: center;"> made by jun yeong jung </p>
+    <input class="id" type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+    <input class="id" type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    ">
 </body>
 </html>
